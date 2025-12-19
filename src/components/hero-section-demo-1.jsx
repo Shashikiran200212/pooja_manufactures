@@ -21,7 +21,7 @@ export default function HeroSectionOne() {
       <div className="relative min-h-screen flex flex-col justify-center items-center px-4 text-center">
         <div className="absolute inset-0 bg-black/40" />
 
-        <h1 className="relative z-10 max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white">
+        <h1 className="relative z-10 max-w-4xl text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white">
           {"Evolution in Motion".split(" ").map((word, i) => (
             <motion.span
               key={i}
@@ -167,7 +167,7 @@ export default function HeroSectionOne() {
         <div>
           <h3 className="text-lg font-bold">Get in Touch</h3>
           <ul>
-            <li>📞 9618423541</li>
+            <li>📞 +91 9618423541</li>
             <li>✉️ java.choudhary@gmail.com</li>
           </ul>
         </div>
