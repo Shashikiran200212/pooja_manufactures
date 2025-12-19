@@ -81,8 +81,11 @@ export default function HeroSectionOne() {
           <h2 className="text-white text-2xl md:text-3xl font-bold mb-2">
             About Us
           </h2>
-          <p className="text-white/80">
-            We design premium fans that blend innovation, performance and style.
+          <p className="text-white/80 font-light text-sm md:text-base">
+            At Pooja manufactures, we believe that a great fan is more than just a utility—it is a masterpiece of engineering and design. With decades of manufacturing 
+            expertise, we have perfected the art of air movement, blending traditional craftsmanship with modern innovation. Our commitment to using premium materials 
+            ensures that every blade we produce delivers a lifetime of reliability. We don't just move air; we enhance the way you experience your environment. 
+            From our factory to your ceiling, quality is the wind beneath our wings.
           </p>
         </div>
       </motion.section>
