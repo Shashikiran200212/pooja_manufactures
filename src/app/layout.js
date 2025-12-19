@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Pooja Manufactures",
-  description: "Pooja Manufactures",
+  title: "Pooja Manufacturing",
+  description: "Pooja Manufacturing",
 };
 
 export default function RootLayout({ children }) {

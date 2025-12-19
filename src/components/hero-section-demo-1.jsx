@@ -167,12 +167,12 @@ export default function HeroSectionOne() {
         <div>
           <h3 className="text-lg font-bold">Get in Touch</h3>
           <ul>
-            <li>📞 1234567890</li>
-            <li>✉️ pooja@gmail.com</li>
+            <li>📞 9618423541</li>
+            <li>✉️ java.choudhary@gmail.com</li>
           </ul>
         </div>
         <div className="sm:col-span-2 lg:col-span-4 text-center">
-          © 2025 Pooja Manufactures
+          © 2025 Pooja Manufacturing
         </div>
       </motion.footer>
     </div>
@@ -183,7 +183,7 @@ export default function HeroSectionOne() {
 const Navbar = () => (
   <nav className="w-full bg-white text-black flex justify-center py-4 sticky top-0 z-50">
     <h1 className="text-lg md:text-2xl font-bold">
-      Pooja Manufactures
+      Pooja Manufacturing
     </h1>
   </nav>
 );

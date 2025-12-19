@@ -124,7 +124,7 @@ export default async function ProductDetailPage({ params }) {
           <CopyPhoneButton />
 
           <p className="text-xs text-neutral-500 text-center">
-            Sold by Pooja Manufactures
+            Sold by Pooja Manufacturing
           </p>
         </div>
       </div>
