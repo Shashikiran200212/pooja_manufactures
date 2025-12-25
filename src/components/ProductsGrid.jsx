@@ -12,11 +12,11 @@ const ProductsGrid = () => {
             className="group"
           >
             <div className="bg-white rounded-lg p-4 flex flex-col shadow-sm hover:scale-105 transition-all duration-300 cursor-pointer">
-              
+
               {/* IMAGE */}
               <div className="w-full h-48 overflow-hidden rounded-md">
                 <img
-                  src={product.images[0]}   // ✅ FIXED
+                  src={product.variants[0].image}   // ✅ CORRECT
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
@@ -44,6 +44,7 @@ const ProductsGrid = () => {
                   </span>
                 </p>
               </div>
+
             </div>
           </Link>
         ))}

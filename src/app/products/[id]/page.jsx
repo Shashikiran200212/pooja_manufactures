@@ -35,7 +35,7 @@ export default async function ProductDetailPage({ params }) {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* LEFT — IMAGE + TITLE */}
-        <div className="lg:col-span-1 bg-white rounded-lg p-4 sticky top-6 h-fit">
+        <div className="lg:col-span-1 bg-white rounded-lg p-4  top-6 h-fit">
           <ProductDetailClient product={product} />
         </div>
 
