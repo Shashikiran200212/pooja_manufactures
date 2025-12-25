@@ -24,7 +24,7 @@ export const products = [
     variants: [
       { label: "Ivory", image: "/16.jpeg" },
       { label: "Brown", image: "/14.jpeg" },
-      { label: "Smoke Brown", image: "/aura smoke brown.jpg" },
+      { label: "Smoke Brown", image: "/aura-smoke-brown.jpg" },
     ],
   },
 
@@ -36,9 +36,9 @@ export const products = [
     oldPrice: 3500,
     rating: 5,
     variants: [
-      { label: "Smoke Brown", image: "/high breeze smoke brown.jpg" },
-      { label: "Brown", image: "/high breeze brown.jpg" },
-      { label: "Ivory", image: "/high breeze ivory.jpg" },
+      { label: "Smoke Brown", image: "/high-breeze-smoke-brown.jpg" },
+      { label: "Brown", image: "/high-breeze-brown.jpg" },
+      { label: "Ivory", image: "/high-breeze-ivory.jpg" },
     ],
   },
 
@@ -50,8 +50,8 @@ export const products = [
     oldPrice: 3500,
     rating: 5,
     variants: [
-      { label: "Ivory", image: "/aura delux ivory.jpg" },
-      { label: "Smoke Brown", image: "/aura delux smokebrown.jpg" },
+      { label: "Ivory", image: "/aura-delux-ivory.jpg" },
+      { label: "Smoke Brown", image: "/aura-delux-smokebrown.jpg" },
     ],
   },
 
