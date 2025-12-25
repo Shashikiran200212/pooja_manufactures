@@ -2,14 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-
-/* ---------------- PRODUCT DATA ---------------- */
-const products = [
-  { id: 1, price: 2500, oldPrice: 3500, image: "/1.jpeg" },
-  { id: 2, price: 2500, oldPrice: 3500, image: "/2.jpeg" },
-  { id: 3, price: 2500, oldPrice: 3500, image: "/3.jpeg" },
-  { id: 4, price: 2500, oldPrice: 3500, image: "/4.jpeg" },
-];
+import { products } from "@/lib/products"; // ✅ REAL PRODUCTS
 
 export default function HeroSectionOne() {
   return (
@@ -21,7 +14,7 @@ export default function HeroSectionOne() {
       <div className="relative min-h-screen flex flex-col justify-center items-center px-4 text-center">
         <div className="absolute inset-0 bg-black/40" />
 
-        <h1 className="relative z-10 max-w-4xl text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white">
+        <h1 className="relative z-10 max-w-4xl text-4xl md:text-5xl lg:text-7xl font-bold text-white">
           {"Evolution in Motion".split(" ").map((word, i) => (
             <motion.span
               key={i}
@@ -67,8 +60,8 @@ export default function HeroSectionOne() {
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="bg-[#252525] flex flex-col md:flex-row items-center"
       >
         <img
@@ -81,24 +74,19 @@ export default function HeroSectionOne() {
           <h2 className="text-white text-2xl md:text-3xl font-bold mb-2">
             About Us
           </h2>
-          <p className="text-white/80 font-light text-sm md:text-base">
-            At Pooja manufactures, we believe that a great fan is more than just a utility—it is a masterpiece of engineering and design. With decades of manufacturing 
-            expertise, we have perfected the art of air movement, blending traditional craftsmanship with modern innovation. Our commitment to using premium materials 
-            ensures that every blade we produce delivers a lifetime of reliability. We don't just move air; we enhance the way you experience your environment. 
-            From our factory to your ceiling, quality is the wind beneath our wings.
+          <p className="text-white/80 text-sm md:text-base">
+            At Pooja Manufacturing, we believe a great fan is more than a utility —
+            it’s a masterpiece of engineering and design.
           </p>
         </div>
       </motion.section>
 
-      {/* ================= PRODUCTS ================= */}
+      {/* ================= PRODUCTS (FIXED) ================= */}
       <motion.section
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={{
-          hidden: {},
-          show: { transition: { staggerChildren: 0.15 } },
-        }}
+        viewport={{ once: true }}
+        variants={{ show: { transition: { staggerChildren: 0.15 } } }}
         className="bg-neutral-100 p-4"
       >
         <motion.h2
@@ -112,8 +100,8 @@ export default function HeroSectionOne() {
         </motion.h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {products.map((p) => (
-            <Link key={p.id} href={`/products/${p.id}`}>
+          {products.slice(0, 4).map((product) => (
+            <Link key={product.id} href={`/products/${product.id}`}>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -122,11 +110,20 @@ export default function HeroSectionOne() {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-lg p-3 hover:scale-105 transition cursor-pointer"
               >
-                <img src={p.image} alt="" />
-                <p className="text-red-500 text-sm mt-2">
-                  Rs {p.price}{" "}
+                <img
+                  src={product.variants?.[0]?.image}
+                  alt={product.name}
+                  className="w-full h-40 object-contain"
+                />
+
+                <p className="mt-2 font-medium text-sm text-neutral-800">
+                  {product.name}
+                </p>
+
+                <p className="text-red-500 text-sm">
+                  ₹{product.price}{" "}
                   <span className="line-through text-neutral-500">
-                    Rs {p.oldPrice}
+                    ₹{product.oldPrice}
                   </span>
                 </p>
               </motion.div>
@@ -145,13 +142,7 @@ export default function HeroSectionOne() {
       </motion.section>
 
       {/* ================= FOOTER ================= */}
-      <motion.footer
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="bg-neutral-600 text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 text-sm"
-      >
+      <footer className="bg-neutral-600 text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 text-sm">
         <div>
           <h3 className="text-lg font-bold">Better Air</h3>
           <p>High quality fans and air solutions.</p>
@@ -174,7 +165,7 @@ export default function HeroSectionOne() {
         <div className="sm:col-span-2 lg:col-span-4 text-center">
           © 2025 Pooja Manufacturing
         </div>
-      </motion.footer>
+      </footer>
     </div>
   );
 }
