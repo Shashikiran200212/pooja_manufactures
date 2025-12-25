@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { products } from "@/lib/products";
 import CopyPhoneButton from "@/components/CopyPhoneButton";
-import ProductImageCarousel from "@/components/ProductImageCarousel";
+import ProductDetailClient from "@/components/ProductDetailClient";
 
 export default async function ProductDetailPage({ params }) {
   const { id } = await params;
 
-  const product = products.find((p) => p.id === Number(id));
+  const product = products.find(
+    (p) => p.id === Number(id)
+  );
 
   if (!product) {
     return (
@@ -32,18 +34,15 @@ export default async function ProductDetailPage({ params }) {
       {/* MAIN LAYOUT */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-        {/* LEFT — IMAGE CAROUSEL */}
+        {/* LEFT — IMAGE + TITLE */}
         <div className="lg:col-span-1 bg-white rounded-lg p-4 sticky top-6 h-fit">
-          <ProductImageCarousel images={product.images} />
+          <ProductDetailClient product={product} />
         </div>
 
         {/* CENTER — PRODUCT INFO */}
         <div className="lg:col-span-1 bg-white rounded-lg p-6 flex flex-col gap-4">
 
-          <h1 className="text-2xl md:text-3xl font-semibold">
-            {product.name}
-          </h1>
-
+          {/* RATING */}
           <div className="flex items-center gap-2 text-sm">
             <div className="text-yellow-500">
               {"★".repeat(product.rating)}
@@ -56,6 +55,7 @@ export default async function ProductDetailPage({ params }) {
 
           <hr />
 
+          {/* PRICE */}
           <div className="flex items-center gap-3">
             <span className="text-3xl font-bold text-green-600">
               ₹{product.price}
@@ -71,6 +71,7 @@ export default async function ProductDetailPage({ params }) {
 
           <hr />
 
+          {/* DESCRIPTION */}
           <div>
             <h2 className="font-semibold mb-1">Product Description</h2>
             <p className="text-gray-700 text-sm leading-relaxed">

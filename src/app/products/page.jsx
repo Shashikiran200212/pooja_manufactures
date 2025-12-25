@@ -1,7 +1,7 @@
 import ProductsGrid from "@/components/ProductsGrid";
 import Link from "next/link";
 import React from "react";
-import ProductImageCarousel from "@/components/ProductImageCarousel";
+
 
 const page = () => {
   return (

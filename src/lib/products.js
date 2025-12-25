@@ -6,13 +6,14 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/1.jpeg",
-      "/9.jpeg",
-      "/8.jpeg",
-      "/11.jpeg",
+    variants: [
+      { label: "Ivory", image: "/1.jpeg" },
+      { label: "Brown", image: "/9.jpeg" },
+      { label: "Smoke Brown", image: "/8.jpeg" },
+      { label: "Classic", image: "/11.jpeg" },
     ],
   },
+
   {
     id: 2,
     name: "Aura Fan",
@@ -20,12 +21,13 @@ export const products = [
     price: 3200,
     oldPrice: 4200,
     rating: 4,
-    images: [
-      "/16.jpeg",
-      "/14.jpeg",
-      "/aura smoke brown.jpg"
+    variants: [
+      { label: "Ivory", image: "/16.jpeg" },
+      { label: "Brown", image: "/14.jpeg" },
+      { label: "Smoke Brown", image: "/aura smoke brown.jpg" },
     ],
   },
+
   {
     id: 3,
     name: "CG Hybrid",
@@ -33,12 +35,13 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/high breeze smoke brown.jpg",
-      "/high breeze brown.jpg",
-      "/high breeze ivory.jpg",
+    variants: [
+      { label: "Smoke Brown", image: "/high breeze smoke brown.jpg" },
+      { label: "Brown", image: "/high breeze brown.jpg" },
+      { label: "Ivory", image: "/high breeze ivory.jpg" },
     ],
   },
+
   {
     id: 4,
     name: "Aura Deluxe",
@@ -46,11 +49,12 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/aura delux ivory.jpg",
-      "/aura delux smokebrown.jpg",
+    variants: [
+      { label: "Ivory", image: "/aura delux ivory.jpg" },
+      { label: "Smoke Brown", image: "/aura delux smokebrown.jpg" },
     ],
   },
+
   {
     id: 5,
     name: "Nano 7 LED",
@@ -58,10 +62,11 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/6.jpeg",
+    variants: [
+      { label: "Standard", image: "/6.jpeg" },
     ],
   },
+
   {
     id: 6,
     name: "BLDC 7 LED",
@@ -69,11 +74,11 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/5.jpeg",
-
+    variants: [
+      { label: "Standard", image: "/5.jpeg" },
     ],
   },
+
   {
     id: 7,
     name: "Nano 9 Watt LED",
@@ -81,11 +86,11 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/2.jpeg",
-
+    variants: [
+      { label: "Standard", image: "/2.jpeg" },
     ],
   },
+
   {
     id: 8,
     name: "BLDC 9 Watt LED",
@@ -93,9 +98,8 @@ export const products = [
     price: 2456,
     oldPrice: 3500,
     rating: 5,
-    images: [
-      "/7.jpeg",
-
+    variants: [
+      { label: "Standard", image: "/7.jpeg" },
     ],
-  }
+  },
 ];
